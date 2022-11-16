@@ -8,7 +8,7 @@ console.log(
 );
 
 // 2. Generate a number pattern.
-//    Pick a random number and add it to our pattern.
+//    Pick three random numbers and add them to our pattern.
 //    - initialize array
 //    - pick random integer
 const pattern = [];
@@ -17,7 +17,13 @@ function getRandomGameNumber() {
     return Math.ceil(Math.random() * 4);
 }
 
-console.log(getRandomGameNumber());
+function addRandomGameNumber() {
+    pattern.push(getRandomGameNumber());
+}
+
+for (let i = 0; i < 3; i++) {
+    addRandomGameNumber();
+}
 
 // 3. Display the number pattern.
 //    Printing each number, then waiting a bit, and hide the displayed pattern.
